@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Configurar projeto NodeJs + TypeScript</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<h2>Configurar projeto NodeJs + TypeScript</h2>
+	<ol>
+		<li>Criar uma pasta</li>
+		<li>npm init -y</li>
+		<li>npm install typescript -D</li>
+		<li>npm install @types/node -D</li>
+		<li>npx tsc --init
+			<ol>
+				<li>Abra o arquivo “tsconfig.json”</li>
+				<li>Troque a opção “target” de “es5” para “es6”</li>
+				<li>Descomente a linha “sourceMap:true”</li>
+			</ol>
+		</li>
+		<li>npm install ts-node -D</li>
+		<li>npm install nodemon -D</li>
+		<li>Abra o arquivo “package.json”, na seção “scripts”.
+			<ol>
+				<li>"scripts": {
+					 <br>"test": "echo \"Error: no test specified\" && exit 1",
+					 <br>"build": "tsc",
+					 <br>"build:live": "nodemon --exec ./node_modules/.bin/ts-node -- ./index.ts",
+					 <br>"dev": "npm run build:live",
+					 <br>"start": "node ./index.js",
+					 <br>"prod": "npm run build && npm start"
+					 <br>}
+				</li>
+			</ol>
+		</li>
+		<li>Mongoose:
+			<ol>
+				<li>npm install mongoose --save</li>
+				<li>npm install @types/mongoose --save-dev</li>
+			</ol>
+		</li>
+		<li>Express:
+			<ol>
+				<li>npm install express --save</li>
+				<li>npm install @types/express --save-dev</li>
+			</ol>
+		</li>
+		<li>CORS:
+			<ol>
+				<li>npm install cors --save</li>
+				<li>npm install @types/cors --save-dev</li>
+			</ol>
+		</li>
+		<li>Body-parser (middleware express):
+			<ol>
+				<li>npm install body-parser --save</li>
+				<li>npm install @types/body-parser --save-dev</li>
+			</ol>
+		</li>
+		<li><b>Codar o projeto:</b></li>
+		<li>Criar arquivo index.ts</li>
+		<li>let saudacao: string = 'Alô, mundo!';
+			<br>console.log(saudacao);</li>			
+		<li>npm run dev</li>
+		<li>Done!!!</li>
+	</ol>
+	
+</body>
+</html>
